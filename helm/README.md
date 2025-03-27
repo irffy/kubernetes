@@ -38,18 +38,8 @@ Install Helm (if not already installed):
 ```sh
 curl https://raw.githubusercontent.com/helm/helm/main/scripts/get-helm-3 | bash
 
-Adding & Managing Helm Repositories
+2. Adding & Managing Helm Repositories
 
-# helm repo add bitnami https://charts.bitnami.com/bitnami  # Add a repo
+helm repo add bitnami https://charts.bitnami.com/bitnami  # Add a repo
 helm repo update                                           # Update the repo
 helm search repo nginx                                     # Search for a chart
-
-helm install my-app bitnami/nginx        # Install a chart
-helm list                                # List installed releases
-helm status my-app                       # Get the status of a release
-
-helm upgrade my-app bitnami/nginx --set service.type=ClusterIP  # Upgrade release
-helm rollback my-app 1                                         # Rollback to version 1
-
-helm upgrade my-app bitnami/nginx --set service.type=ClusterIP  # Upgrade release
-helm rollback my-app 1                                         # Rollback to version 1
